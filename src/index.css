@@ -1,13 +1,55 @@
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font: 14px "Century Gothic", Futura, sens-serif;
+  margin: 20px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* リストの左側の空白を設定 */
+ol, ul {
+  padding-left: 20px;
 }
+
+/* ボードの下に空白を入れてる？ */
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px soolid #999; /*solid: 一重線*/
+  float: left; /*左寄せ*/
+  font-size: 24px;
+  font-weight: bold; /*一般的な文字の太さ*/
+  line-height: 34px; /*行間(文字サイズと上下の余白)*/
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus { /*カーソルを合わせるなどユーザ操作でフォーカスされた時のスタイルを指定する疑似クラス*/
+  outline: none;
+}
+
+.kdd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row; /*左から右の水平軸*/
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+
